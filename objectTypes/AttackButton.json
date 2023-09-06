@@ -1,0 +1,53 @@
+{
+	"name": "AttackButton",
+	"plugin-id": "Sprite",
+	"sid": 494523999392773,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 640,
+						"height": 832,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "C:\\Users\\jenek\\Downloads\\Default_A_menacing_rectangular_button_glowing_with_a_sinister_0_60e8f458-ae8e-492d-8e44-ec6141457bb3_0.png",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4550379,
+						"collisionPoly": {
+							"points": [
+								0.246875,
+								0.189904,
+								0.75,
+								0.192308,
+								0.928125,
+								0.5,
+								0.739062,
+								0.799279,
+								0.264062,
+								0.796875,
+								0.151562,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 709217431895563,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

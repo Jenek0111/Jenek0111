@@ -1,0 +1,53 @@
+{
+	"name": "ThornlingImp3",
+	"plugin-id": "Sprite",
+	"sid": 943682365701394,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 322,
+						"height": 581,
+						"originX": 0.5,
+						"originY": 0.500861,
+						"originalSource": "C:\\Users\\jenek\\OneDrive\\Pictures\\AI generate rpg characters\\A card Thorling Imp.png",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7391188,
+						"collisionPoly": {
+							"points": [
+								0.015528,
+								0.00860585,
+								0.981366,
+								0.010327,
+								0.996894,
+								0.499139,
+								0.981366,
+								0.989673,
+								0.0186335,
+								0.989673,
+								0,
+								0.499139
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 911328217467036,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

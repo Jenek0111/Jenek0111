@@ -1,0 +1,22 @@
+{
+	"name": "LevelButtons",
+	"plugin-id": "Sprite",
+	"sid": 843570829645346,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Level1",
+		"Level4",
+		"Level3",
+		"Level2",
+		"Level5",
+		"Level6",
+		"Level7",
+		"Level8",
+		"Level9",
+		"Level10",
+		"Level11",
+		"Level12"
+	]
+}
