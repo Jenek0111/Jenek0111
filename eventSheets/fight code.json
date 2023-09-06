@@ -1,0 +1,5275 @@
+{
+	"name": "fight code",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "HPThornlingImp3",
+			"type": "number",
+			"initialValue": "2",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 480234299317403
+		},
+		{
+			"eventType": "variable",
+			"name": "HPThornlingImp2",
+			"type": "number",
+			"initialValue": "2",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 611715715148863
+		},
+		{
+			"eventType": "variable",
+			"name": "HPThornlingImp1",
+			"type": "number",
+			"initialValue": "2",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 167638377372989
+		},
+		{
+			"eventType": "variable",
+			"name": "EnemyChoice",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 799251127297489
+		},
+		{
+			"eventType": "variable",
+			"name": "HPTreant1",
+			"type": "number",
+			"initialValue": "6",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 186993337823041
+		},
+		{
+			"eventType": "variable",
+			"name": "HPTreant2",
+			"type": "number",
+			"initialValue": "6",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 743153351442299
+		},
+		{
+			"eventType": "variable",
+			"name": "Enemies",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 393789769302501
+		},
+		{
+			"eventType": "variable",
+			"name": "Damage",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 849146824397929
+		},
+		{
+			"eventType": "variable",
+			"name": "HPMO1",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 357574726837517
+		},
+		{
+			"eventType": "variable",
+			"name": "HPMO2",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 846595461878131
+		},
+		{
+			"eventType": "variable",
+			"name": "HPMO3",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 245440359020456
+		},
+		{
+			"eventType": "variable",
+			"name": "HPSS1",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 247668810874279
+		},
+		{
+			"eventType": "variable",
+			"name": "HPSS2",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 616031904681275
+		},
+		{
+			"eventType": "variable",
+			"name": "HPFS1",
+			"type": "number",
+			"initialValue": "4",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 859902644953208
+		},
+		{
+			"eventType": "variable",
+			"name": "HPFS2",
+			"type": "number",
+			"initialValue": "4",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 518300315202370
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Treant1",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 501858778922100
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 753835856834049,
+							"parameters": {
+								"variable": "HPTreant1",
+								"value": "6"
+							}
+						}
+					],
+					"sid": 890456351895073
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 413412652721720,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "AttackButton"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 408686756601380,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 188041474369316,
+							"parameters": {
+								"variable": "HPTreant1",
+								"value": "Damage"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TreantHP1",
+							"sid": 710304411795775,
+							"parameters": {
+								"text": "HPTreant1"
+							}
+						}
+					],
+					"sid": 817728507744914
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 905568175504250
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 867475433351216,
+							"parameters": {
+								"variable": "HPTreant1",
+								"value": "6"
+							}
+						}
+					],
+					"sid": 865615591682504
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 710839802411157,
+							"parameters": {
+								"variable": "HPTreant1",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 504042586707271,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Treant1",
+							"sid": 573969290718978,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Treant1",
+							"sid": 686650780092145,
+							"parameters": {
+								"x": "-114"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TreantHP1",
+							"sid": 434995574448017,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TreantDamage1",
+							"sid": 144891303082096,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 151962863584469,
+							"parameters": {
+								"layout": "Zone1"
+							}
+						}
+					],
+					"sid": 743569984778615
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 673641962488339
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 290241901066201,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Treant1",
+							"sid": 285913609559895,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Treant1",
+							"sid": 902261342050128,
+							"parameters": {
+								"x": "941",
+								"y": " 423"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TreantHP1",
+							"sid": 121896251238248,
+							"parameters": {
+								"text": "HPTreant1"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "TreantHP1",
+							"sid": 892321395953682,
+							"parameters": {
+								"x": "791.415889",
+								"y": "144.750089"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "TreantDamage1",
+							"sid": 169714612376669,
+							"parameters": {
+								"x": "1041.687537",
+								"y": "148.915693"
+							}
+						}
+					],
+					"sid": 101892081474736
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 495107962478961,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Treant1",
+							"sid": 146728149255164,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Treant1",
+							"sid": 118119645263589,
+							"parameters": {
+								"x": "582 ",
+								"y": "461"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "TreantDamage1",
+							"sid": 178853454145161,
+							"parameters": {
+								"x": "682.173914",
+								"y": " 187.069879"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "TreantHP1",
+							"sid": 265938727996101,
+							"parameters": {
+								"x": "431.703272",
+								"y": "182.042157"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TreantHP1",
+							"sid": 694675659222072,
+							"parameters": {
+								"text": "HPTreant1"
+							}
+						}
+					],
+					"sid": 149752137649893
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 847793595895810,
+							"parameters": {
+								"variable": "HPTreant1",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 749156576724886,
+							"parameters": {
+								"variable": "HPTreant2",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 801892708359008,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "Treant1",
+							"sid": 199372498367486,
+							"parameters": {
+								"x": "-114"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 739845680547139,
+							"parameters": {
+								"layout": "Zone1"
+							}
+						}
+					],
+					"sid": 838439024266626
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 929141703535955,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Treant1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 179544395654592,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 150130169778715
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 834963438990736,
+							"parameters": {
+								"variable": "HPTreant1",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 738006865930083,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Treant1",
+							"sid": 471077703433753,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TreantDamage1",
+							"sid": 340960826394078,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TreantHP1",
+							"sid": 559263827423281,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 371280144004157
+				}
+			],
+			"sid": 509781050792844
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Damage",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 360993096730021
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 133389107824477,
+							"parameters": {
+								"variable": "Damage",
+								"value": "round (random (1, 2))"
+							}
+						}
+					],
+					"sid": 759059372928134
+				}
+			],
+			"sid": 374846869480671
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Treant2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 232246133908349,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Treant2",
+							"sid": 240207123224057,
+							"parameters": {
+								"x": "1286",
+								"y": " 461"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Treant2",
+							"sid": 987579483419027,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "TreantHP2",
+							"sid": 704749631937370,
+							"parameters": {
+								"x": "1135",
+								"y": " 192.349928"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "TreantDamage2",
+							"sid": 270024686718594,
+							"parameters": {
+								"x": "1395.354499",
+								"y": "  193.708999"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TreantHP2",
+							"sid": 814399882788491,
+							"parameters": {
+								"text": "HPTreant2"
+							}
+						}
+					],
+					"sid": 721542894937804
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 683299483259381,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Treant2",
+							"sid": 147068662348035,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TreantHP2",
+							"sid": 471716920784004,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TreantDamage2",
+							"sid": 737951039797493,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 931471909541136
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 467189232082697,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "Treant2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 708827811824516,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"value": "2"
+							}
+						}
+					],
+					"sid": 151950879686155
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 834769302655609,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "AttackButton"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 975110989681086,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 737992319342673,
+							"parameters": {
+								"variable": "HPTreant2",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TreantHP2",
+							"sid": 869844208379949,
+							"parameters": {
+								"text": "HPTreant2"
+							}
+						}
+					],
+					"sid": 593108297032749
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 685968803277269
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 692206319478874,
+							"parameters": {
+								"variable": "HPTreant2",
+								"value": "6"
+							}
+						}
+					],
+					"sid": 658648069769488
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 802829740342395,
+							"parameters": {
+								"variable": "HPTreant2",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 163872919336736,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Treant2",
+							"sid": 564461025803866,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "Treant2",
+							"sid": 248727008537184,
+							"parameters": {
+								"x": "-114"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TreantHP2",
+							"sid": 389838365356376,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TreantDamage2",
+							"sid": 718083924389016,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 240161668433957
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 590140879689262,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 4,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Treant2",
+							"sid": 209229915891022,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TreantHP2",
+							"sid": 952805140178765,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TreantDamage2",
+							"sid": 644888124512662,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Treant1",
+							"sid": 851242701375908,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TreantDamage1",
+							"sid": 118301752349758,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TreantHP1",
+							"sid": 598836586874495,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 401662713539749
+				}
+			],
+			"sid": 178423886581994
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ThornlingImp1",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 409583551391121
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 795670095199865,
+							"parameters": {
+								"variable": "HPThornlingImp1",
+								"value": "2"
+							}
+						}
+					],
+					"sid": 296528563032354
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 726374204263640,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "AttackButton"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 107912940257054,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 895080094554522,
+							"parameters": {
+								"variable": "HPThornlingImp1",
+								"value": "Damage"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TIHP1",
+							"sid": 668989547806851,
+							"parameters": {
+								"text": "HPThornlingImp1"
+							}
+						}
+					],
+					"sid": 784842360032423
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 111912645778585,
+							"parameters": {
+								"variable": "HPThornlingImp1",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 288305627807946,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ThornlingImp1",
+							"sid": 258741125899139,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "ThornlingImp1",
+							"sid": 650299595421980,
+							"parameters": {
+								"x": "-114"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIHP1",
+							"sid": 753719335593542,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIDamge1",
+							"sid": 515792013556934,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 859555434557584,
+							"parameters": {
+								"layout": "Zone1"
+							}
+						}
+					],
+					"sid": 886683332459373
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 363552431664130
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 956441887208927,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ThornlingImp1",
+							"sid": 683335778384141,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "ThornlingImp1",
+							"sid": 691245382297933,
+							"parameters": {
+								"x": "945",
+								"y": " 423"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TIHP1",
+							"sid": 824530754728556,
+							"parameters": {
+								"text": "HPThornlingImp1"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "TIHP1",
+							"sid": 225875854198669,
+							"parameters": {
+								"x": "809.84032",
+								"y": " 155.467965"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "TIDamge1",
+							"sid": 916791170671316,
+							"parameters": {
+								"x": "1051.640448",
+								"y": "157.273408"
+							}
+						}
+					],
+					"sid": 928254879891786
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 358947800591322,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ThornlingImp1",
+							"sid": 228250555168434,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "ThornlingImp1",
+							"sid": 295855540368318,
+							"parameters": {
+								"x": "582 ",
+								"y": "461"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "TIDamge1",
+							"sid": 231843173349520,
+							"parameters": {
+								"x": "687.473962",
+								"y": "195"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "TIHP1",
+							"sid": 882015766009559,
+							"parameters": {
+								"x": "445.496949",
+								"y": "195"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TIHP1",
+							"sid": 312364944655818,
+							"parameters": {
+								"text": "HPThornlingImp1"
+							}
+						}
+					],
+					"sid": 566710048066049
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 920695223151682,
+							"parameters": {
+								"variable": "HPThornlingImp1",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 413548981972524,
+							"parameters": {
+								"variable": "HPThornlingImp2",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 911545173577166,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "ThornlingImp1",
+							"sid": 998664946529056,
+							"parameters": {
+								"x": "-114"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 279168752357516,
+							"parameters": {
+								"layout": "Zone1"
+							}
+						}
+					],
+					"sid": 451350584658408
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 317860939068569,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "ThornlingImp1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 785066522943759,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"value": "3"
+							}
+						}
+					],
+					"sid": 931821150826826
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 924897707132394,
+							"parameters": {
+								"variable": "HPThornlingImp1",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 901229975943127,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ThornlingImp1",
+							"sid": 747000383113101,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIDamge1",
+							"sid": 874045894174772,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIHP1",
+							"sid": 992001387353471,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 245828390914932
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 923310350661148
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 796056662760596,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ThornlingImp1",
+							"sid": 332428930495671,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "ThornlingImp1",
+							"sid": 334060713908468,
+							"parameters": {
+								"x": "945",
+								"y": " 423"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TIHP1",
+							"sid": 291029335198334,
+							"parameters": {
+								"text": "HPThornlingImp1"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "TIHP1",
+							"sid": 150548651219755,
+							"parameters": {
+								"x": "809.84032",
+								"y": " 155.467965"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "TIDamge1",
+							"sid": 783992084359933,
+							"parameters": {
+								"x": "1051.640448",
+								"y": "157.273408"
+							}
+						}
+					],
+					"sid": 309318748399760
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 164209144129175,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "5"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 626297156559338,
+							"parameters": {
+								"variable": "HPThornlingImp1",
+								"comparison": 2,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ThornlingImp1",
+							"sid": 662350340256738,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIDamge1",
+							"sid": 624428377138761,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIHP1",
+							"sid": 339628282507228,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 928616380660222
+				}
+			],
+			"sid": 527928511955522
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ThornlingImp2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 390018292306905,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "ThornlingImp2",
+							"sid": 406626474952389,
+							"parameters": {
+								"x": "1286",
+								"y": " 461"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ThornlingImp2",
+							"sid": 635772002043084,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "TIHP2",
+							"sid": 816984184637775,
+							"parameters": {
+								"x": "1150",
+								"y": " 192.349928"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "TIDamge2",
+							"sid": 506833695211011,
+							"parameters": {
+								"x": "1393",
+								"y": "  193.708999"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TIHP2",
+							"sid": 815105032587332,
+							"parameters": {
+								"text": "HPThornlingImp2"
+							}
+						}
+					],
+					"sid": 493397102150959
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 474618998593288,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ThornlingImp2",
+							"sid": 847536590614740,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIHP2",
+							"sid": 200414881295038,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIDamge2",
+							"sid": 497461748535295,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 249273695941315
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 471598071802742,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "ThornlingImp2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 179777008813738,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"value": "4"
+							}
+						}
+					],
+					"sid": 284289889670534
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 718624878121331,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "AttackButton"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 104321455150709,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 920196984063544,
+							"parameters": {
+								"variable": "HPThornlingImp2",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TIHP2",
+							"sid": 202515254675120,
+							"parameters": {
+								"text": "HPThornlingImp2"
+							}
+						}
+					],
+					"sid": 262849241331761
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 478557442094089
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 624570777957285,
+							"parameters": {
+								"variable": "HPThornlingImp2",
+								"value": "2"
+							}
+						}
+					],
+					"sid": 578513841472758
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 421372664021678,
+							"parameters": {
+								"variable": "HPThornlingImp2",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 746262690906458,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ThornlingImp2",
+							"sid": 870828835931728,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "ThornlingImp2",
+							"sid": 741995285931483,
+							"parameters": {
+								"x": "-114"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIHP2",
+							"sid": 636791441585207,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIDamge2",
+							"sid": 512428740051102,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 573170252103426
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 673984822057117,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 4,
+								"value": "5"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 706545640918559,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 2,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ThornlingImp2",
+							"sid": 735359101519362,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIHP2",
+							"sid": 454728380537832,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIDamge2",
+							"sid": 831358667807957,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ThornlingImp1",
+							"sid": 609786123373357,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIDamge1",
+							"sid": 899514238185418,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIHP1",
+							"sid": 467317317344264,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ThornlingImp3",
+							"sid": 940552159124009,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIDamge3",
+							"sid": 320581172794711,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIHP3",
+							"sid": 405523058910136,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 710953997833056,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 273157570675613
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 600106598991723,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "ThornlingImp2",
+							"sid": 994587870651715,
+							"parameters": {
+								"x": "283",
+								"y": " 423"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "TIHP2",
+							"sid": 464363702389952,
+							"parameters": {
+								"x": "146.971201",
+								"y": "155.02571"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "TIDamge2",
+							"sid": 646753351446213,
+							"parameters": {
+								"x": "389.37517",
+								"y": " 155.257375"
+							}
+						}
+					],
+					"sid": 504725868205061
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 725743442555265,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "5"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 502763485947986,
+							"parameters": {
+								"variable": "HPThornlingImp2",
+								"comparison": 2,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ThornlingImp2",
+							"sid": 849806047782750,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIHP2",
+							"sid": 593764944752083,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIDamge2",
+							"sid": 392742284952310,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 971206514701825
+				}
+			],
+			"sid": 482217146568749
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ThornlingImp3",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 500872258276822,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "3"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 844389180329321,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ThornlingImp3",
+							"sid": 363335642692460,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIHP3",
+							"sid": 208554862860049,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIDamge3",
+							"sid": 157188168713947,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 348714435748723,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 187550541509014,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "ThornlingImp3",
+							"sid": 522077989423483,
+							"parameters": {
+								"x": "1627",
+								"y": "423"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "TIHP3",
+							"sid": 221222347848768,
+							"parameters": {
+								"x": "1491.295325",
+								"y": " 155.800426"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "TIDamge3",
+							"sid": 700573914584070,
+							"parameters": {
+								"x": "1734.267864",
+								"y": "155.753413"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TIHP3",
+							"sid": 394673957600660,
+							"parameters": {
+								"text": "HPThornlingImp3"
+							}
+						}
+					],
+					"sid": 423162719344234
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 127293003142915,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "5"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 924990807080431,
+							"parameters": {
+								"variable": "HPThornlingImp1",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 831618507840409,
+							"parameters": {
+								"variable": "HPThornlingImp2",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 647145556248319,
+							"parameters": {
+								"variable": "HPThornlingImp3",
+								"comparison": 2,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ThornlingImp2",
+							"sid": 755114136326319,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIHP2",
+							"sid": 784749869479134,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIDamge2",
+							"sid": 973628313828162,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ThornlingImp1",
+							"sid": 202908890202166,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIDamge1",
+							"sid": 123292135637576,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIHP1",
+							"sid": 342155526818366,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ThornlingImp3",
+							"sid": 440258642897587,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIDamge3",
+							"sid": 580225035411233,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIHP3",
+							"sid": 173517642234581,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 309125070397016,
+							"parameters": {
+								"layout": "Zone1"
+							}
+						}
+					],
+					"sid": 121403126842510
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 167448660234656
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 371821634663187,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 542683778813559,
+							"parameters": {
+								"variable": "HPThornlingImp3",
+								"value": "2"
+							}
+						}
+					],
+					"sid": 243418129197988
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 626628393708901,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "ThornlingImp3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 354164784577471,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"value": "5"
+							}
+						}
+					],
+					"sid": 253024163364854
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 399836088837253,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "AttackButton"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 868791927537265,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 491241796749626,
+							"parameters": {
+								"variable": "HPThornlingImp3",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TIHP3",
+							"sid": 814590836998652,
+							"parameters": {
+								"text": "HPThornlingImp3"
+							}
+						}
+					],
+					"sid": 817179028460020
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 321421064552918,
+							"parameters": {
+								"variable": "HPThornlingImp3",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 257363471895158,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ThornlingImp3",
+							"sid": 351506220044132,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIDamge3",
+							"sid": 985722633250724,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "TIHP3",
+							"sid": 967454301584795,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 459728018494020
+				}
+			],
+			"sid": 474865382350736
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "MoosyOoze1",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 452669612859389
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 599421065858679,
+							"parameters": {
+								"variable": "HPMO1",
+								"value": "3"
+							}
+						}
+					],
+					"sid": 715140643065724
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 261731326841189,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "AttackButton"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 740658012929297,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 578478502933998,
+							"parameters": {
+								"variable": "HPMO1",
+								"value": "Damage"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "MOHP1",
+							"sid": 261593982946568,
+							"parameters": {
+								"text": "HPMO1"
+							}
+						}
+					],
+					"sid": 456873340703472
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 799067962395749,
+							"parameters": {
+								"variable": "HPMO1",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 413538338442742,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "MoosyOoze1",
+							"sid": 418243112491054,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "MoosyOoze1",
+							"sid": 932588282556609,
+							"parameters": {
+								"x": "-114"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MOHP1",
+							"sid": 281080007986659,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MODamage1",
+							"sid": 831674128248080,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 114764991608623,
+							"parameters": {
+								"layout": "Zone1"
+							}
+						}
+					],
+					"sid": 169673462070227
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 554795342620931
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 248783113088871,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "MoosyOoze1",
+							"sid": 508384646879104,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "MoosyOoze1",
+							"sid": 500131958947763,
+							"parameters": {
+								"x": "945",
+								"y": " 423"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "MOHP1",
+							"sid": 645213076318394,
+							"parameters": {
+								"text": "HPMO1"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "MOHP1",
+							"sid": 538513561605801,
+							"parameters": {
+								"x": "809.84032",
+								"y": " 155.467965"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "MODamage1",
+							"sid": 889898838328364,
+							"parameters": {
+								"x": "1060",
+								"y": "157.273408"
+							}
+						}
+					],
+					"sid": 856957596614734
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 849711611290788,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "MoosyOoze1",
+							"sid": 770304059104738,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "MoosyOoze1",
+							"sid": 493505372951266,
+							"parameters": {
+								"x": "582 ",
+								"y": "461"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "MODamage1",
+							"sid": 486647878883195,
+							"parameters": {
+								"x": "695",
+								"y": "195"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "MOHP1",
+							"sid": 820449000649015,
+							"parameters": {
+								"x": "445.496949",
+								"y": "195"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "MOHP1",
+							"sid": 624756636489240,
+							"parameters": {
+								"text": "HPMO1"
+							}
+						}
+					],
+					"sid": 748463136761372
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 596412800380510,
+							"parameters": {
+								"variable": "HPMO1",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 482701943844877,
+							"parameters": {
+								"variable": "HPMO2",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 827173753652880,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "MoosyOoze1",
+							"sid": 785122071400059,
+							"parameters": {
+								"x": "-114"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 704918969209885,
+							"parameters": {
+								"layout": "Zone1"
+							}
+						}
+					],
+					"sid": 384173365133623
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 555131829339753,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "MoosyOoze1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 944137408673586,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"value": "6"
+							}
+						}
+					],
+					"sid": 102331511478348
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 573792981959141,
+							"parameters": {
+								"variable": "HPMO1",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 800895103963693,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "MoosyOoze1",
+							"sid": 528142122164545,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MODamage1",
+							"sid": 320555233730003,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MOHP1",
+							"sid": 364688823073077,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 987950803774076
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 903613628050220
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 357330220220654,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "MoosyOoze1",
+							"sid": 668273191371616,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "MoosyOoze1",
+							"sid": 505674881904146,
+							"parameters": {
+								"x": "945",
+								"y": " 423"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "MOHP1",
+							"sid": 500453188099829,
+							"parameters": {
+								"text": "HPMO1"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "MOHP1",
+							"sid": 930605615872354,
+							"parameters": {
+								"x": "809.84032",
+								"y": " 155.467965"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "MODamage1",
+							"sid": 880875742866374,
+							"parameters": {
+								"x": "1060",
+								"y": "157.273408"
+							}
+						}
+					],
+					"sid": 183766067101434
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 481232681470822,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "8"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 126004700257057,
+							"parameters": {
+								"variable": "HPMO1",
+								"comparison": 2,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "MoosyOoze1",
+							"sid": 820104209219000,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MODamage1",
+							"sid": 682633211231149,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MOHP1",
+							"sid": 564248191506897,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 225964921296518
+				}
+			],
+			"sid": 789727221996026
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "MoosyOoze2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 547799458775416,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "MoosyOoze2",
+							"sid": 343533079138153,
+							"parameters": {
+								"x": "1286",
+								"y": " 461"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MoosyOoze2",
+							"sid": 929575208245119,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "MOHP2",
+							"sid": 567993310980601,
+							"parameters": {
+								"x": "1150",
+								"y": " 192.349928"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "MODamage2",
+							"sid": 866082908004404,
+							"parameters": {
+								"x": "1400",
+								"y": "  193.708999"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "MOHP2",
+							"sid": 489267460680710,
+							"parameters": {
+								"text": "HPMO2"
+							}
+						}
+					],
+					"sid": 961295802063867
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 527012869234646,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "MoosyOoze2",
+							"sid": 776276278042040,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MOHP2",
+							"sid": 749158732589561,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MODamage2",
+							"sid": 775807335732348,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 505851085430930
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 496064812626708,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "MoosyOoze2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 312768407164568,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"value": "7"
+							}
+						}
+					],
+					"sid": 979350576645349
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 134599787513548,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "AttackButton"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 329504906863830,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"comparison": 0,
+								"value": "7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 698184115078482,
+							"parameters": {
+								"variable": "HPMO2",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "MOHP2",
+							"sid": 263133269528440,
+							"parameters": {
+								"text": "HPMO2"
+							}
+						}
+					],
+					"sid": 727163816524744
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 978448742414530
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 291663487618749,
+							"parameters": {
+								"variable": "HPMO2",
+								"value": "3"
+							}
+						}
+					],
+					"sid": 577595914645386
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 457651670545357,
+							"parameters": {
+								"variable": "HPMO2",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 342929502140284,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "MoosyOoze2",
+							"sid": 252984454980071,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "MoosyOoze2",
+							"sid": 977176113507808,
+							"parameters": {
+								"x": "-114"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MOHP2",
+							"sid": 467858667758796,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MODamage2",
+							"sid": 350297155523398,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 242495865922690
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 507165511422782,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 4,
+								"value": "8"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 960162145380502,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 2,
+								"value": "6"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "MoosyOoze2",
+							"sid": 331238903956149,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MOHP2",
+							"sid": 862344763871828,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MODamage2",
+							"sid": 844104709700598,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MoosyOoze1",
+							"sid": 191990570353384,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MODamage1",
+							"sid": 866875643811971,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MOHP1",
+							"sid": 581812791483259,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MoosyOoze3",
+							"sid": 761595570304029,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MODamage3",
+							"sid": 749773799636490,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MOHP3",
+							"sid": 873701369777536,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 431599112453644,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 435427123751939
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 557646989200121,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "MoosyOoze2",
+							"sid": 767435456468516,
+							"parameters": {
+								"x": "283",
+								"y": " 423"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "MOHP2",
+							"sid": 913251887599155,
+							"parameters": {
+								"x": "146.971201",
+								"y": "155.02571"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "MODamage2",
+							"sid": 251877409628580,
+							"parameters": {
+								"x": "395",
+								"y": " 155.257375"
+							}
+						}
+					],
+					"sid": 372413695489983
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 770898604044786,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "8"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 667103819754507,
+							"parameters": {
+								"variable": "HPMO2",
+								"comparison": 2,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "MoosyOoze2",
+							"sid": 559738584451783,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MOHP2",
+							"sid": 248979377856813,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MODamage2",
+							"sid": 402648642573051,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 798174290655590
+				}
+			],
+			"sid": 316463589273449
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "MoosyOoze3",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 317023630222607,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "6"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 978930177764162,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "7"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "MoosyOoze3",
+							"sid": 798432262403328,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MOHP3",
+							"sid": 589159076737622,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MODamage3",
+							"sid": 322764123217038,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 849708047602738,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 368648319852358,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "MoosyOoze3",
+							"sid": 460629263185785,
+							"parameters": {
+								"x": "1627",
+								"y": "423"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "MOHP3",
+							"sid": 660539600569053,
+							"parameters": {
+								"x": "1491.295325",
+								"y": " 155.800426"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "MODamage3",
+							"sid": 924701911070062,
+							"parameters": {
+								"x": "1740",
+								"y": "155.753413"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "MOHP3",
+							"sid": 396512652979289,
+							"parameters": {
+								"text": "HPMO3"
+							}
+						}
+					],
+					"sid": 944513569738205
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 514005072031024,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "8"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 596412453427052,
+							"parameters": {
+								"variable": "HPMO1",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 892788956032103,
+							"parameters": {
+								"variable": "HPMO2",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 291710429322820,
+							"parameters": {
+								"variable": "HPMO3",
+								"comparison": 2,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "MoosyOoze2",
+							"sid": 511327531719747,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MOHP2",
+							"sid": 386482140453396,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MODamage2",
+							"sid": 183957156238728,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MoosyOoze1",
+							"sid": 687228670341970,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MODamage1",
+							"sid": 976062930032990,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MOHP1",
+							"sid": 970793102603231,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MoosyOoze3",
+							"sid": 465329784555600,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MODamage3",
+							"sid": 577500023012530,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MOHP3",
+							"sid": 728303417701454,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 205990789448457,
+							"parameters": {
+								"layout": "Zone1"
+							}
+						}
+					],
+					"sid": 158141109840060
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 826789570900993
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 582942333232362,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 700466424024504,
+							"parameters": {
+								"variable": "HPMO3",
+								"value": "3"
+							}
+						}
+					],
+					"sid": 469629903906008
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 840835458119181,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "MoosyOoze3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 863409977346744,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"value": "8"
+							}
+						}
+					],
+					"sid": 360172905299904
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 445828234483667,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "AttackButton"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 180475387825224,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"comparison": 0,
+								"value": "8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 708471142690153,
+							"parameters": {
+								"variable": "HPMO3",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "MOHP3",
+							"sid": 169613145366318,
+							"parameters": {
+								"text": "HPMO3"
+							}
+						}
+					],
+					"sid": 836370264620298
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 391531228717650,
+							"parameters": {
+								"variable": "HPMO3",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 315666803438873,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "MoosyOoze3",
+							"sid": 734415504668808,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MODamage3",
+							"sid": 120005681660951,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "MOHP3",
+							"sid": 180056480786470,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 403462547548741
+				}
+			],
+			"sid": 163149304857697
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ShadowSerpent1",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 434918622315283
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 471331790599246,
+							"parameters": {
+								"variable": "HPSS1",
+								"value": "3"
+							}
+						}
+					],
+					"sid": 933042985565388
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 243232759494714,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "AttackButton"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 715224710268037,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"comparison": 0,
+								"value": "9"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 285596549587469,
+							"parameters": {
+								"variable": "HPSS1",
+								"value": "Damage"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SSHP1",
+							"sid": 717168436411911,
+							"parameters": {
+								"text": "HPSS1"
+							}
+						}
+					],
+					"sid": 306832955344122
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 958326328416325
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 345472503192265,
+							"parameters": {
+								"variable": "HPSS1",
+								"value": "3"
+							}
+						}
+					],
+					"sid": 830897005764400
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 315493144101959,
+							"parameters": {
+								"variable": "HPSS1",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 271190858899217,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "9"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ShadowmireSerpent1",
+							"sid": 442227777265545,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "ShadowmireSerpent1",
+							"sid": 646074474633020,
+							"parameters": {
+								"x": "-114"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "SSHP1",
+							"sid": 579726094314628,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "SSDamage1",
+							"sid": 893905885351000,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 354552763963613,
+							"parameters": {
+								"layout": "Zone1"
+							}
+						}
+					],
+					"sid": 318160389771727
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 494674752453726
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 745972042438934,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "9"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ShadowmireSerpent1",
+							"sid": 347197136317914,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "ShadowmireSerpent1",
+							"sid": 530945232927428,
+							"parameters": {
+								"x": "941",
+								"y": " 423"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SSHP1",
+							"sid": 747921828548266,
+							"parameters": {
+								"text": "HPSS1"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "SSHP1",
+							"sid": 627561794887677,
+							"parameters": {
+								"x": "791.415889",
+								"y": "144.750089"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "SSDamage1",
+							"sid": 868699126134208,
+							"parameters": {
+								"x": "1060",
+								"y": "155"
+							}
+						}
+					],
+					"sid": 290018233201463
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 500280624817610,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ShadowmireSerpent1",
+							"sid": 288501895708978,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "ShadowmireSerpent1",
+							"sid": 271746927039695,
+							"parameters": {
+								"x": "582 ",
+								"y": "461"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "SSDamage1",
+							"sid": 591170024156492,
+							"parameters": {
+								"x": "690",
+								"y": " 195"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "SSHP1",
+							"sid": 251900555382253,
+							"parameters": {
+								"x": "431.703272",
+								"y": "182.042157"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SSHP1",
+							"sid": 774543923353118,
+							"parameters": {
+								"text": "HPSS1"
+							}
+						}
+					],
+					"sid": 452260616295069
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 723193673780940,
+							"parameters": {
+								"variable": "HPSS1",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 855059813453004,
+							"parameters": {
+								"variable": "HPSS2",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 978361891632785,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "ShadowmireSerpent1",
+							"sid": 660530050990067,
+							"parameters": {
+								"x": "-114"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 235292597982892,
+							"parameters": {
+								"layout": "Zone1"
+							}
+						}
+					],
+					"sid": 171240409644958
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 273096154973208,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "ShadowmireSerpent1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 571675375892752,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"value": "9"
+							}
+						}
+					],
+					"sid": 923005571778337
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 592652490242292,
+							"parameters": {
+								"variable": "HPSS1",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 804434595274581,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ShadowmireSerpent1",
+							"sid": 421878974088526,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "SSDamage1",
+							"sid": 705587359452168,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "SSHP1",
+							"sid": 675802964937073,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 503488203713022
+				}
+			],
+			"sid": 712549852733168
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "ShadowSerpent2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 904419003617684,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "ShadowmireSerpent2",
+							"sid": 183659771131163,
+							"parameters": {
+								"x": "1286",
+								"y": " 461"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ShadowmireSerpent2",
+							"sid": 473890131176078,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "SSHP2",
+							"sid": 894905083822350,
+							"parameters": {
+								"x": "1135",
+								"y": " 185"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "SSDamage2",
+							"sid": 831838565539542,
+							"parameters": {
+								"x": "1395.354499",
+								"y": "  193.708999"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SSHP2",
+							"sid": 277606130306502,
+							"parameters": {
+								"text": "HPSS2"
+							}
+						}
+					],
+					"sid": 518083151642607
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 106353382301495,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "9"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ShadowmireSerpent2",
+							"sid": 817682367294800,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "SSHP2",
+							"sid": 542469047844483,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "SSDamage2",
+							"sid": 279589302110781,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 409324578727893
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 246520936957526,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "ShadowmireSerpent2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 842749904539191,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"value": "10"
+							}
+						}
+					],
+					"sid": 635722824204637
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 472888699236133,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "AttackButton"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 172831097999964,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"comparison": 0,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 745919626904638,
+							"parameters": {
+								"variable": "HPSS2",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SSHP2",
+							"sid": 311582887116292,
+							"parameters": {
+								"text": "HPSS2"
+							}
+						}
+					],
+					"sid": 876908412110392
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 425095823085309
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 940523542486138,
+							"parameters": {
+								"variable": "HPSS2",
+								"value": "3"
+							}
+						}
+					],
+					"sid": 708737274076701
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 736943951403289,
+							"parameters": {
+								"variable": "HPSS2",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 538312234233278,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ShadowmireSerpent2",
+							"sid": 799078938606284,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "ShadowmireSerpent2",
+							"sid": 413901568608440,
+							"parameters": {
+								"x": "-114"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "SSHP2",
+							"sid": 151870336545669,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "SSDamage2",
+							"sid": 375177763218276,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 457406073378118
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 702389837246232,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 4,
+								"value": "10"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 814070022682645,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 2,
+								"value": "9"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "ShadowmireSerpent2",
+							"sid": 164972947888356,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "SSHP2",
+							"sid": 907876958117776,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "SSDamage2",
+							"sid": 337710902415683,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ShadowmireSerpent1",
+							"sid": 202453276932309,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "SSDamage1",
+							"sid": 799834124643688,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "SSHP1",
+							"sid": 306362531763907,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 998094291640964,
+					"isOrBlock": true
+				}
+			],
+			"sid": 477783508218717
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "FeralSatyr1",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 603056807802975
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 459930901421132,
+							"parameters": {
+								"variable": "HPFS1",
+								"value": "4"
+							}
+						}
+					],
+					"sid": 839174920871870
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 838523755794587,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "AttackButton"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 937246158802688,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"comparison": 0,
+								"value": "11"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 861488482760629,
+							"parameters": {
+								"variable": "HPFS1",
+								"value": "Damage"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "FSHP1",
+							"sid": 686504641692295,
+							"parameters": {
+								"text": "HPFS1"
+							}
+						}
+					],
+					"sid": 649739213284365
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 154693117214415
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 809979906375271,
+							"parameters": {
+								"variable": "HPFS1",
+								"value": "4"
+							}
+						}
+					],
+					"sid": 470418287026881
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 213179035315904,
+							"parameters": {
+								"variable": "HPFS1",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 405169923287577,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "11"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "FeralSatyr1",
+							"sid": 506615678576250,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "FeralSatyr1",
+							"sid": 633670771417669,
+							"parameters": {
+								"x": "-114"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FSHP1",
+							"sid": 790338835070770,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FSDamage1",
+							"sid": 835296533086983,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 795838977584541,
+							"parameters": {
+								"layout": "Zone1"
+							}
+						}
+					],
+					"sid": 716310446309512
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 215638352387676
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 275165505022702,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "11"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "FeralSatyr1",
+							"sid": 258740288959835,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "FeralSatyr1",
+							"sid": 235691804699060,
+							"parameters": {
+								"x": "941",
+								"y": " 423"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "FSHP1",
+							"sid": 668825570452851,
+							"parameters": {
+								"text": "HPFS1"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "FSHP1",
+							"sid": 410711049984008,
+							"parameters": {
+								"x": "791.415889",
+								"y": "144.750089"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "FSDamage1",
+							"sid": 710429808546131,
+							"parameters": {
+								"x": "1050",
+								"y": "155"
+							}
+						}
+					],
+					"sid": 887394219346625
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 962035313778742,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "12"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "FeralSatyr1",
+							"sid": 777890690314907,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "FeralSatyr1",
+							"sid": 348614667105511,
+							"parameters": {
+								"x": "582 ",
+								"y": "461"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "FSDamage1",
+							"sid": 176966968551494,
+							"parameters": {
+								"x": "690",
+								"y": " 195"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "FSHP1",
+							"sid": 685523578138468,
+							"parameters": {
+								"x": "431.703272",
+								"y": "182.042157"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TreantHP1",
+							"sid": 529914951882422,
+							"parameters": {
+								"text": "HPFS1"
+							}
+						}
+					],
+					"sid": 132847361379329
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 375124801586619,
+							"parameters": {
+								"variable": "HPFS1",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 358795190121438,
+							"parameters": {
+								"variable": "HPFS2",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 340431054881983,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "12"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "FeralSatyr1",
+							"sid": 713213230513456,
+							"parameters": {
+								"x": "-114"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 872280363169700,
+							"parameters": {
+								"layout": "Zone1"
+							}
+						}
+					],
+					"sid": 567734554457999
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 733980340850928,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "FeralSatyr1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 211640231953661,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"value": "11"
+							}
+						}
+					],
+					"sid": 150964021992987
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 588954877487480,
+							"parameters": {
+								"variable": "HPFS1",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 795417899476417,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "12"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "FeralSatyr1",
+							"sid": 771991736998047,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FSDamage1",
+							"sid": 691735709825936,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FSHP1",
+							"sid": 175379312791026,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 817566632357222
+				}
+			],
+			"sid": 466871505924260
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "FeralSatyr2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 146229460083208,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "12"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "FeralSatyr2",
+							"sid": 701139778106258,
+							"parameters": {
+								"x": "1286",
+								"y": " 461"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FeralSatyr2",
+							"sid": 120469605371469,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "FSHP2",
+							"sid": 861806139515876,
+							"parameters": {
+								"x": "1135",
+								"y": "183"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "FSDamage2",
+							"sid": 181568228649348,
+							"parameters": {
+								"x": "1395.354499",
+								"y": "  193.708999"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "FSHP2",
+							"sid": 606721255175675,
+							"parameters": {
+								"text": "HPFS2"
+							}
+						}
+					],
+					"sid": 686444487868995
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 657394581381584,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "11"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "FeralSatyr2",
+							"sid": 106581265119285,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FSHP2",
+							"sid": 270081189991682,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FSDamage2",
+							"sid": 697485569313462,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 567340660565098
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 854809092051709,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "FeralSatyr2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 480165811819932,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"value": "12"
+							}
+						}
+					],
+					"sid": 190131314594743
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-object-clicked",
+							"objectClass": "Mouse",
+							"sid": 607426713756416,
+							"parameters": {
+								"mouse-button": "left",
+								"click-type": "clicked",
+								"object-clicked": "AttackButton"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 557356291924190,
+							"parameters": {
+								"variable": "EnemyChoice",
+								"comparison": 0,
+								"value": "12"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 225685015994219,
+							"parameters": {
+								"variable": "HPFS2",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "FSHP2",
+							"sid": 473585410458906,
+							"parameters": {
+								"text": "HPFS2"
+							}
+						}
+					],
+					"sid": 599347085185161
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 518082574127807
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 538211202120979,
+							"parameters": {
+								"variable": "HPFS2",
+								"value": "4"
+							}
+						}
+					],
+					"sid": 819619551991228
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 941687840242749,
+							"parameters": {
+								"variable": "HPFS2",
+								"comparison": 2,
+								"value": "1"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 154578273677178,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 0,
+								"value": "12"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "FeralSatyr2",
+							"sid": 285599525569983,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-x",
+							"objectClass": "FeralSatyr2",
+							"sid": 768387896789927,
+							"parameters": {
+								"x": "-114"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FSHP2",
+							"sid": 575909022215832,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FSDamage2",
+							"sid": 505489475658539,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 945433402275308
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 314056561458848,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 4,
+								"value": "12"
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 297185495184893,
+							"parameters": {
+								"variable": "Enemies",
+								"comparison": 2,
+								"value": "11"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "FeralSatyr2",
+							"sid": 498469933076453,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FSHP2",
+							"sid": 320139955988053,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FSDamage2",
+							"sid": 319787137923633,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FeralSatyr1",
+							"sid": 145954107656567,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FSDamage1",
+							"sid": 378268032370423,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "FSHP1",
+							"sid": 384929656000761,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 705892328477283
+				}
+			],
+			"sid": 553506799684391
+		}
+	],
+	"sid": 698930448795566
+}

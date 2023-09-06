@@ -1,0 +1,17 @@
+{
+	"name": "TreantHP1",
+	"plugin-id": "Text",
+	"sid": 741535112086886,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Health",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 422655149600002
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}
