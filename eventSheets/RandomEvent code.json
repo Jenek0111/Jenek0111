@@ -1,5 +1,318 @@
 {
 	"name": "RandomEvent code",
-	"events": [],
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "CaveSelect",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 998023524239805
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Cave",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Cave2",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 487998627360604
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Cave2",
+									"sid": 670241266916838,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 257044738401494
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 287965946466073,
+									"parameters": {
+										"variable": "CaveSelect",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Cave2",
+									"sid": 215789385293289,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "CaveStart",
+									"sid": 556987534228715,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 240086658002152
+						}
+					],
+					"sid": 371830552178683
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "CaveStart",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 983424409970979
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "CaveStart",
+									"sid": 686818528361959,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								}
+							],
+							"sid": 358917200776065
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 167686312020732,
+									"parameters": {
+										"variable": "CaveSelect",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "CaveStart",
+									"sid": 529250427823906,
+									"parameters": {
+										"visibility": "visible"
+									}
+								}
+							],
+							"sid": 245671904932293
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 846630603349107
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "DialogScreenYES",
+									"sid": 981128600639795,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "DialogScreenYES",
+									"sid": 246863063975129,
+									"parameters": {
+										"x": "779",
+										"y": " 621"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "YES",
+									"sid": 126869079306615,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "YES",
+									"sid": 621932927592048,
+									"parameters": {
+										"x": "676.016336",
+										"y": " 606.732849"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "DialogScreenNO",
+									"sid": 962049264394399,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "DialogScreenNO",
+									"sid": 465573714648886,
+									"parameters": {
+										"x": "1081.458903",
+										"y": " 621"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "NO",
+									"sid": 936707084389828,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "NO",
+									"sid": 745087478383921,
+									"parameters": {
+										"x": "982.705144",
+										"y": "608.461737"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "DialogScreen",
+									"sid": 503112417473678,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "DialogScreen",
+									"sid": 616547112711896,
+									"parameters": {
+										"x": "929",
+										"y": " 498"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Question",
+									"sid": 595997409359698,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Question",
+									"sid": 864712834320270,
+									"parameters": {
+										"x": "627",
+										"y": "465"
+									}
+								}
+							],
+							"sid": 454316217805863
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 578814036424416,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "DialogScreenYES"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 617837397481190,
+									"parameters": {
+										"variable": "CaveSelect",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 330071313412939,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 478394823938556,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "DialogScreenNO"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 783957389508930,
+									"parameters": {
+										"layout": "Zone1"
+									}
+								}
+							],
+							"sid": 138200781501408,
+							"isOrBlock": true
+						}
+					],
+					"sid": 742236741901639
+				}
+			],
+			"sid": 856000164945313
+		}
+	],
 	"sid": 273545381233199
 }

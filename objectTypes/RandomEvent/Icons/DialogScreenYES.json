@@ -1,0 +1,57 @@
+{
+	"name": "DialogScreenYES",
+	"plugin-id": "Sprite",
+	"sid": 571072925911769,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 595,
+						"height": 144,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1819125,
+						"collisionPoly": {
+							"points": [
+								0.01680672268907563,
+								0,
+								0.9798319327731092,
+								0,
+								0.9983193277310924,
+								0.08333333333333333,
+								0.9983193277310924,
+								0.9097222222222222,
+								0.9798319327731092,
+								1,
+								0.020168067226890758,
+								1,
+								0,
+								0.9027777777777778,
+								0,
+								0.0763888888888889
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 439632415426578,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

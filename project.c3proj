@@ -39,59 +39,103 @@
 	"objectTypes": {
 		"items": [
 			"Touch",
-			"Level1",
-			"Level2",
-			"Level3",
-			"Level4",
-			"Treant1",
-			"TreantHP1",
-			"TreantDamage1",
 			"AttackButton",
-			"Mouse",
-			"Treant2",
-			"TreantHP2",
-			"TreantDamage2",
-			"ShadowmireSerpent1",
-			"ShadowmireSerpent2",
-			"ThornlingImp1",
-			"ThornlingImp2",
-			"ThornlingImp3",
-			"MoosyOoze1",
-			"MoosyOoze2",
-			"MoosyOoze3",
-			"FeralSatyr1",
-			"FeralSatyr2",
-			"TIHP1",
-			"TIDamge1",
-			"TIHP2",
-			"TIHP3",
-			"TIDamge2",
-			"TIDamge3",
-			"Text",
-			"MOHP1",
-			"MOHP2",
-			"MOHP3",
-			"MODamage1",
-			"MODamage2",
-			"MODamage3",
-			"SSHP2",
-			"SSHP1",
-			"SSDamage2",
-			"SSDamage1",
-			"FSHP2",
-			"FSHP1",
-			"FSDamage1",
-			"FSDamage2",
-			"Level5",
-			"Level6",
-			"Level7",
-			"Level8",
-			"Level9",
-			"Level10",
-			"Level11",
-			"Level12"
+			"Mouse"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"FeralSatyr1",
+					"FeralSatyr2",
+					"MoosyOoze1",
+					"MoosyOoze2",
+					"MoosyOoze3",
+					"ShadowmireSerpent1",
+					"ShadowmireSerpent2",
+					"ThornlingImp1",
+					"ThornlingImp2",
+					"ThornlingImp3",
+					"Treant1",
+					"Treant2"
+				],
+				"subfolders": [],
+				"name": "Enemies"
+			},
+			{
+				"items": [
+					"Level1",
+					"Level10",
+					"Level11",
+					"Level12",
+					"Level2",
+					"Level3",
+					"Level4",
+					"Level5",
+					"Level6",
+					"Level7",
+					"Level8",
+					"Level9"
+				],
+				"subfolders": [],
+				"name": "Levels"
+			},
+			{
+				"items": [
+					"FSDamage1",
+					"FSDamage2",
+					"FSHP1",
+					"FSHP2",
+					"MODamage1",
+					"MODamage2",
+					"MODamage3",
+					"MOHP1",
+					"MOHP2",
+					"MOHP3",
+					"SSDamage1",
+					"SSDamage2",
+					"SSHP1",
+					"SSHP2",
+					"TIDamge1",
+					"TIDamge2",
+					"TIDamge3",
+					"TIHP1",
+					"TIHP2",
+					"TIHP3",
+					"TreantDamage1",
+					"TreantDamage2",
+					"TreantHP1",
+					"TreantHP2"
+				],
+				"subfolders": [],
+				"name": "EnemieText"
+			},
+			{
+				"items": [],
+				"subfolders": [
+					{
+						"items": [
+							"CaveStart",
+							"Cave2"
+						],
+						"subfolders": [],
+						"name": "Cave"
+					},
+					{
+						"items": [
+							"DialogScreen",
+							"DialogScreenNO",
+							"DialogScreenYES",
+							"Question",
+							"NO",
+							"YES"
+						],
+						"subfolders": [],
+						"name": "Icons"
+					}
+				],
+				"name": "RandomEvent"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],

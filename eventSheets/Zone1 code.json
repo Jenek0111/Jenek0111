@@ -12,6 +12,26 @@
 			"sid": 469759852895780
 		},
 		{
+			"eventType": "variable",
+			"name": "LevelSelect",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 727994731669533
+		},
+		{
+			"eventType": "variable",
+			"name": "StopLevel",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 252375824757020
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "Levels",
@@ -19,720 +39,1419 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
-					"eventType": "block",
-					"conditions": [
+					"eventType": "group",
+					"disabled": false,
+					"title": "LevelsSystem",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
 						{
-							"id": "on-object-clicked",
-							"objectClass": "Mouse",
-							"sid": 305834473252289,
-							"parameters": {
-								"mouse-button": "left",
-								"click-type": "clicked",
-								"object-clicked": "LevelButtons"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 782526196498468,
-							"parameters": {
-								"layout": "Fight"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 169321874903132,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "LevelButtons"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 683907725911979,
+									"parameters": {
+										"variable": "LevelCount",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 569917263292159,
+									"parameters": {
+										"variable": "LevelSelect",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 689317342690372
 						},
 						{
-							"id": "add-to-eventvar",
-							"objectClass": "System",
-							"sid": 252494560206974,
-							"parameters": {
-								"variable": "LevelCount",
-								"value": "1"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-start-of-layout",
+									"objectClass": "System",
+									"sid": 522440886767566
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "LevelButtons",
+									"sid": 903559030443314,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "LevelButtons",
+									"sid": 332334083528842,
+									"parameters": {
+										"x": "637",
+										"y": "-119"
+									}
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 467792806229869,
+									"parameters": {
+										"variable": "StopLevel",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 868546057027045
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 232710431122456,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "LevelButtons"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 891593535240313,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 443709135356278,
+									"parameters": {
+										"variable": "LevelSelect",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 399635235270150,
+									"parameters": {
+										"variable": "StopLevel",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 168720757172577,
+									"parameters": {
+										"layout": "Fight"
+									}
+								}
+							],
+							"sid": 897099263355342
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 679406445183224,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "LevelButtons"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 582081791509058,
+									"parameters": {
+										"variable": "LevelSelect",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 727083310485610,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "2"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 124573793838236,
+									"parameters": {
+										"variable": "StopLevel",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 382357359479684,
+									"parameters": {
+										"layout": "RandomEvent"
+									}
+								}
+							],
+							"sid": 219806505745859
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 761499546751072,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "LevelButtons"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 432949656723822,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "3"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 626041180595338,
+									"parameters": {
+										"variable": "LevelSelect",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 111564720945490,
+									"parameters": {
+										"variable": "StopLevel",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 578948144921502,
+									"parameters": {
+										"layout": "Fight"
+									}
+								}
+							],
+							"sid": 758315319782099
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 516876967063652,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "LevelButtons"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 120276285745795,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "4"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 615947645383633,
+									"parameters": {
+										"variable": "LevelSelect",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 858898361916283,
+									"parameters": {
+										"variable": "StopLevel",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 821062064275406,
+									"parameters": {
+										"layout": "Fight"
+									}
+								}
+							],
+							"sid": 992695873581849
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 541290980955549,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "LevelButtons"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 206773594529967,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "5"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 637416545821781,
+									"parameters": {
+										"variable": "LevelSelect",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 483267613948676,
+									"parameters": {
+										"variable": "StopLevel",
+										"comparison": 0,
+										"value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 103248145063777,
+									"parameters": {
+										"layout": "Fight"
+									}
+								}
+							],
+							"sid": 783035024391621
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 435181980323095,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "LevelButtons"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 227134787932402,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "6"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 499778511890697,
+									"parameters": {
+										"variable": "LevelSelect",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 210476082155020,
+									"parameters": {
+										"variable": "StopLevel",
+										"comparison": 0,
+										"value": "6"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 478006937138751,
+									"parameters": {
+										"layout": "Fight"
+									}
+								}
+							],
+							"sid": 883116794328099
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 896488594802119,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "LevelButtons"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 229999993723493,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "7"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 252420067166661,
+									"parameters": {
+										"variable": "LevelSelect",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 650488210347651,
+									"parameters": {
+										"variable": "StopLevel",
+										"comparison": 0,
+										"value": "7"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 912995557749894,
+									"parameters": {
+										"layout": "Fight"
+									}
+								}
+							],
+							"sid": 121502555143482
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 284390358650052,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "LevelButtons"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 278429861833331,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "8"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 888728653065045,
+									"parameters": {
+										"variable": "LevelSelect",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 594168937498911,
+									"parameters": {
+										"variable": "StopLevel",
+										"comparison": 0,
+										"value": "8"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 122822089453130,
+									"parameters": {
+										"layout": "Fight"
+									}
+								}
+							],
+							"sid": 160098034616980
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 791687026883221,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "LevelButtons"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 684233707290031,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "9"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 287015464864088,
+									"parameters": {
+										"variable": "LevelSelect",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 768233648667052,
+									"parameters": {
+										"variable": "StopLevel",
+										"comparison": 0,
+										"value": "9"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 836871836373196,
+									"parameters": {
+										"layout": "Fight"
+									}
+								}
+							],
+							"sid": 949375909871419
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 744052988635596,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "LevelButtons"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 694933859282049,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "10"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 845720309235583,
+									"parameters": {
+										"variable": "LevelSelect",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 777178007658197,
+									"parameters": {
+										"variable": "StopLevel",
+										"comparison": 0,
+										"value": "10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 874742659516336,
+									"parameters": {
+										"layout": "Fight"
+									}
+								}
+							],
+							"sid": 720622447257350
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 958900856638447,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "LevelButtons"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 299627826115617,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "11"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 589773658680130,
+									"parameters": {
+										"variable": "LevelSelect",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 395941490607023,
+									"parameters": {
+										"variable": "StopLevel",
+										"comparison": 0,
+										"value": "11"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 662525626450295,
+									"parameters": {
+										"layout": "Fight"
+									}
+								}
+							],
+							"sid": 841118450281554
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-object-clicked",
+									"objectClass": "Mouse",
+									"sid": 306535909685142,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked",
+										"object-clicked": "LevelButtons"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 263096580995909,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "12"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 929549295884780,
+									"parameters": {
+										"variable": "LevelSelect",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 197551213802279,
+									"parameters": {
+										"variable": "StopLevel",
+										"comparison": 0,
+										"value": "12"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 781100141515084,
+									"parameters": {
+										"layout": "Fight"
+									}
+								}
+							],
+							"sid": 269372910530694
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 901412289642813,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Level1",
+									"sid": 968295424120641,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level1",
+									"sid": 341026525531725,
+									"parameters": {
+										"x": "655",
+										"y": " 309"
+									}
+								}
+							],
+							"sid": 657258112170425
 						}
 					],
-					"sid": 644004903746724,
-					"isOrBlock": true
+					"sid": 554412972559305
 				},
 				{
-					"eventType": "block",
-					"conditions": [
+					"eventType": "group",
+					"disabled": false,
+					"title": "LevelsVisible",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
 						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 108680824634471
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 386753109952269,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Level2",
+									"sid": 659264782990999,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level2",
+									"sid": 367651262864322,
+									"parameters": {
+										"x": "637",
+										"y": "-119"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Level3",
+									"sid": 472479426298335,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level3",
+									"sid": 677126135918328,
+									"parameters": {
+										"x": "637",
+										"y": "309"
+									}
+								}
+							],
+							"sid": 541939616960260
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 725815364153149,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Level1",
+									"sid": 264267067526720,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level1",
+									"sid": 653565473046385,
+									"parameters": {
+										"x": "637",
+										"y": "-119"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Level2",
+									"sid": 186516142026808,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level2",
+									"sid": 347788467789410,
+									"parameters": {
+										"x": "637",
+										"y": "309"
+									}
+								}
+							],
+							"sid": 182224104622707
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 669022591212256,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Level3",
+									"sid": 402426756474708,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level3",
+									"sid": 504137860823613,
+									"parameters": {
+										"x": "637",
+										"y": "-119"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Level4",
+									"sid": 221253580239427,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level4",
+									"sid": 483542640032923,
+									"parameters": {
+										"x": "637",
+										"y": "309"
+									}
+								}
+							],
+							"sid": 123383167844496
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 825772720895862,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "4"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Level4",
+									"sid": 838217493172555,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level4",
+									"sid": 341370485813626,
+									"parameters": {
+										"x": "637",
+										"y": "-119"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Level5",
+									"sid": 576299923931580,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level5",
+									"sid": 110947090236334,
+									"parameters": {
+										"x": "637",
+										"y": "309"
+									}
+								}
+							],
+							"sid": 790471655692097
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 389760783742241,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Level5",
+									"sid": 563165744178088,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level5",
+									"sid": 238685475812511,
+									"parameters": {
+										"x": "637",
+										"y": "-119"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Level6",
+									"sid": 928647445630594,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level6",
+									"sid": 891677336371839,
+									"parameters": {
+										"x": "637",
+										"y": "309"
+									}
+								}
+							],
+							"sid": 222921381889481
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 491875533554618,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "6"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Level6",
+									"sid": 811823554731753,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level6",
+									"sid": 602692728898863,
+									"parameters": {
+										"x": "637",
+										"y": "-119"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Level7",
+									"sid": 329812267136249,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level7",
+									"sid": 348486764656984,
+									"parameters": {
+										"x": "637",
+										"y": "309"
+									}
+								}
+							],
+							"sid": 633634404506999
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 899353788712303,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "7"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Level7",
+									"sid": 884348095270825,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level7",
+									"sid": 574631611201057,
+									"parameters": {
+										"x": "637",
+										"y": "-119"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Level8",
+									"sid": 404273027654475,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level8",
+									"sid": 365161007725453,
+									"parameters": {
+										"x": "637",
+										"y": "309"
+									}
+								}
+							],
+							"sid": 979539449764490
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 426826118981278,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "8"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Level8",
+									"sid": 765643552681103,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level8",
+									"sid": 400020167189290,
+									"parameters": {
+										"x": "637",
+										"y": "-119"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Level9",
+									"sid": 589692667257191,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level9",
+									"sid": 900428862264607,
+									"parameters": {
+										"x": "637",
+										"y": "309"
+									}
+								}
+							],
+							"sid": 851262700981217
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 633719426506083,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "9"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Level9",
+									"sid": 570451773095717,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level9",
+									"sid": 486036992657683,
+									"parameters": {
+										"x": "637",
+										"y": "-119"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Level10",
+									"sid": 633830468264705,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level10",
+									"sid": 555598012781467,
+									"parameters": {
+										"x": "637",
+										"y": "309"
+									}
+								}
+							],
+							"sid": 279908988569386
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 601330957990425,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "10"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Level10",
+									"sid": 969483397660104,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level10",
+									"sid": 980386576341006,
+									"parameters": {
+										"x": "637",
+										"y": "-119"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Level11",
+									"sid": 701856303783292,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level11",
+									"sid": 277923918254123,
+									"parameters": {
+										"x": "637",
+										"y": "309"
+									}
+								}
+							],
+							"sid": 429659128191344
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 714093459959427,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "11"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Level11",
+									"sid": 450670486375995,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level11",
+									"sid": 103088104826327,
+									"parameters": {
+										"x": "637",
+										"y": "-119"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "Level12",
+									"sid": 234871535524329,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level12",
+									"sid": 583104659566624,
+									"parameters": {
+										"x": "637",
+										"y": "309"
+									}
+								}
+							],
+							"sid": 346998289880359
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 900118078456732,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "12"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Level12",
+									"sid": 299543087974414,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level12",
+									"sid": 249671285436704,
+									"parameters": {
+										"x": "637",
+										"y": "-119"
+									}
+								}
+							],
+							"sid": 544205347530709
 						}
 					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "LevelButtons",
-							"sid": 967390880247034,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "LevelButtons",
-							"sid": 827897811065287,
-							"parameters": {
-								"x": "637",
-								"y": "-119"
-							}
-						}
-					],
-					"sid": 583961218361435
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 215492424570284,
-							"parameters": {
-								"variable": "LevelCount",
-								"comparison": 0,
-								"value": "1"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "Level1",
-							"sid": 378673072296864,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level1",
-							"sid": 835784840195479,
-							"parameters": {
-								"x": "637",
-								"y": "-119"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Level2",
-							"sid": 184441506581454,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level2",
-							"sid": 566657764957440,
-							"parameters": {
-								"x": "637",
-								"y": "309"
-							}
-						}
-					],
-					"sid": 900123624718142
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 916727644328161,
-							"parameters": {
-								"variable": "LevelCount",
-								"comparison": 0,
-								"value": "2"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "go-to-layout",
-							"objectClass": "System",
-							"sid": 470968828905508,
-							"parameters": {
-								"layout": "RandomEvent"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Level2",
-							"sid": 207163798883859,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level2",
-							"sid": 835269684411229,
-							"parameters": {
-								"x": "637",
-								"y": "-119"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Level3",
-							"sid": 157336515641576,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level3",
-							"sid": 175815331290227,
-							"parameters": {
-								"x": "637",
-								"y": "309"
-							}
-						}
-					],
-					"sid": 448074952556150
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 187457198461595,
-							"parameters": {
-								"variable": "LevelCount",
-								"comparison": 0,
-								"value": "3"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "Level3",
-							"sid": 419579695030684,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level3",
-							"sid": 639440515965802,
-							"parameters": {
-								"x": "637",
-								"y": "-119"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Level4",
-							"sid": 321924861704536,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level4",
-							"sid": 504700158322173,
-							"parameters": {
-								"x": "637",
-								"y": "309"
-							}
-						}
-					],
-					"sid": 781842818090954
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 750701466960637,
-							"parameters": {
-								"variable": "LevelCount",
-								"comparison": 0,
-								"value": "4"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "Level4",
-							"sid": 231377433653675,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level4",
-							"sid": 200475597666919,
-							"parameters": {
-								"x": "637",
-								"y": "-119"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Level5",
-							"sid": 103178966152770,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level5",
-							"sid": 702281388395433,
-							"parameters": {
-								"x": "637",
-								"y": "309"
-							}
-						}
-					],
-					"sid": 834835293050032
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 580123572798533,
-							"parameters": {
-								"variable": "LevelCount",
-								"comparison": 0,
-								"value": "5"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "Level5",
-							"sid": 537649240347169,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level5",
-							"sid": 636994229084177,
-							"parameters": {
-								"x": "637",
-								"y": "-119"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Level6",
-							"sid": 152232997571952,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level6",
-							"sid": 803992988864738,
-							"parameters": {
-								"x": "637",
-								"y": "309"
-							}
-						}
-					],
-					"sid": 533086158835712
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 352793777075384,
-							"parameters": {
-								"variable": "LevelCount",
-								"comparison": 0,
-								"value": "6"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "Level6",
-							"sid": 659421013199578,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level6",
-							"sid": 722846158551682,
-							"parameters": {
-								"x": "637",
-								"y": "-119"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Level7",
-							"sid": 375086937085606,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level7",
-							"sid": 834419138145845,
-							"parameters": {
-								"x": "637",
-								"y": "309"
-							}
-						}
-					],
-					"sid": 277254953184235
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 710922867473887,
-							"parameters": {
-								"variable": "LevelCount",
-								"comparison": 0,
-								"value": "7"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "Level7",
-							"sid": 675750487594952,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level7",
-							"sid": 440986760992995,
-							"parameters": {
-								"x": "637",
-								"y": "-119"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Level8",
-							"sid": 550180062875500,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level8",
-							"sid": 841509941620756,
-							"parameters": {
-								"x": "637",
-								"y": "309"
-							}
-						}
-					],
-					"sid": 307636872948289
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 861222614565068,
-							"parameters": {
-								"variable": "LevelCount",
-								"comparison": 0,
-								"value": "8"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "Level8",
-							"sid": 495820329275040,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level8",
-							"sid": 110062511383207,
-							"parameters": {
-								"x": "637",
-								"y": "-119"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Level9",
-							"sid": 909751578706284,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level9",
-							"sid": 388033976335953,
-							"parameters": {
-								"x": "637",
-								"y": "309"
-							}
-						}
-					],
-					"sid": 370419499557944
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 937933471443694,
-							"parameters": {
-								"variable": "LevelCount",
-								"comparison": 0,
-								"value": "9"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "Level9",
-							"sid": 551052270154465,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level9",
-							"sid": 503381749342544,
-							"parameters": {
-								"x": "637",
-								"y": "-119"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Level10",
-							"sid": 618760311027159,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level10",
-							"sid": 460137168500463,
-							"parameters": {
-								"x": "637",
-								"y": "309"
-							}
-						}
-					],
-					"sid": 387709895805476
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 505104703091344,
-							"parameters": {
-								"variable": "LevelCount",
-								"comparison": 0,
-								"value": "10"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "Level10",
-							"sid": 737792786476762,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level10",
-							"sid": 809461649605950,
-							"parameters": {
-								"x": "637",
-								"y": "-119"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Level11",
-							"sid": 445305384959005,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level11",
-							"sid": 408497116833560,
-							"parameters": {
-								"x": "637",
-								"y": "309"
-							}
-						}
-					],
-					"sid": 106117943334170
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 263381178693932,
-							"parameters": {
-								"variable": "LevelCount",
-								"comparison": 0,
-								"value": "11"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "Level11",
-							"sid": 776423576798579,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level11",
-							"sid": 300124305010341,
-							"parameters": {
-								"x": "637",
-								"y": "-119"
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "Level12",
-							"sid": 173920880288851,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level12",
-							"sid": 287651126878635,
-							"parameters": {
-								"x": "637",
-								"y": "309"
-							}
-						}
-					],
-					"sid": 839526304904802
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 158496968405148,
-							"parameters": {
-								"variable": "LevelCount",
-								"comparison": 0,
-								"value": "12"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "Level12",
-							"sid": 401602711559294,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level12",
-							"sid": 574731102024790,
-							"parameters": {
-								"x": "637",
-								"y": "-119"
-							}
-						}
-					],
-					"sid": 337253401946916
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 668699206928206,
-							"parameters": {
-								"variable": "LevelCount",
-								"comparison": 0,
-								"value": "0"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-visible",
-							"objectClass": "Level1",
-							"sid": 681678903257825,
-							"parameters": {
-								"visibility": "visible"
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "Level1",
-							"sid": 625370978647656,
-							"parameters": {
-								"x": "655",
-								"y": " 309"
-							}
-						}
-					],
-					"sid": 781164801199517
+					"sid": 856271323862529,
+					"text-color": [
+						0.054901960784313725,
+						0.8470588235294118,
+						0.1843137254901961,
+						1
+					]
 				}
 			],
 			"sid": 827964262754896

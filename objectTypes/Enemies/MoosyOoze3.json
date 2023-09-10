@@ -1,0 +1,53 @@
+{
+	"name": "MoosyOoze3",
+	"plugin-id": "Sprite",
+	"sid": 780907486746864,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 322,
+						"height": 581,
+						"originX": 0.5,
+						"originY": 0.500861,
+						"originalSource": "C:\\Users\\jenek\\OneDrive\\Pictures\\AI generate rpg characters\\A card Mossy Ooze.png",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1457745,
+						"collisionPoly": {
+							"points": [
+								0.015528,
+								0.00860585,
+								0.981366,
+								0.010327,
+								0.996894,
+								0.499139,
+								0.981366,
+								0.989673,
+								0.0186335,
+								0.989673,
+								0,
+								0.499139
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 406917065323739,
+				"name": "Default",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
