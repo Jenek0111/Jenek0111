@@ -40,7 +40,8 @@
 		"items": [
 			"Touch",
 			"AttackButton",
-			"Mouse"
+			"Mouse",
+			"Sprite"
 		],
 		"subfolders": [
 			{

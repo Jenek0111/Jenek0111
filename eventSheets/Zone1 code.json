@@ -100,15 +100,6 @@
 									}
 								},
 								{
-									"id": "set-position",
-									"objectClass": "LevelButtons",
-									"sid": 332334083528842,
-									"parameters": {
-										"x": "637",
-										"y": "-119"
-									}
-								},
-								{
 									"id": "add-to-eventvar",
 									"objectClass": "System",
 									"sid": 467792806229869,
@@ -855,7 +846,7 @@
 								{
 									"id": "set-visible",
 									"objectClass": "Level2",
-									"sid": 659264782990999,
+									"sid": 918259698608594,
 									"parameters": {
 										"visibility": "invisible"
 									}
@@ -863,10 +854,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level2",
-									"sid": 367651262864322,
+									"sid": 424073923180325,
 									"parameters": {
-										"x": "637",
-										"y": "-119"
+										"x": "1446",
+										"y": " 250"
 									}
 								},
 								{
@@ -880,10 +871,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level3",
-									"sid": 677126135918328,
+									"sid": 290686365609229,
 									"parameters": {
-										"x": "637",
-										"y": "309"
+										"x": "1355",
+										"y": " 403"
 									}
 								}
 							],
@@ -915,10 +906,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level1",
-									"sid": 653565473046385,
+									"sid": 750981841629237,
 									"parameters": {
-										"x": "637",
-										"y": "-119"
+										"x": "1680",
+										"y": " 225"
 									}
 								},
 								{
@@ -932,10 +923,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level2",
-									"sid": 347788467789410,
+									"sid": 340931096194419,
 									"parameters": {
-										"x": "637",
-										"y": "309"
+										"x": "1446",
+										"y": " 250"
 									}
 								}
 							],
@@ -967,10 +958,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level3",
-									"sid": 504137860823613,
+									"sid": 596741494233903,
 									"parameters": {
-										"x": "637",
-										"y": "-119"
+										"x": "1355",
+										"y": " 403"
 									}
 								},
 								{
@@ -984,10 +975,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level4",
-									"sid": 483542640032923,
+									"sid": 598167695074453,
 									"parameters": {
-										"x": "637",
-										"y": "309"
+										"x": "1505",
+										"y": "598"
 									}
 								}
 							],
@@ -1019,10 +1010,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level4",
-									"sid": 341370485813626,
+									"sid": 548281749853722,
 									"parameters": {
-										"x": "637",
-										"y": "-119"
+										"x": "1505",
+										"y": "598"
 									}
 								},
 								{
@@ -1036,10 +1027,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level5",
-									"sid": 110947090236334,
+									"sid": 549078027492835,
 									"parameters": {
-										"x": "637",
-										"y": "309"
+										"x": "1310",
+										"y": " 715"
 									}
 								}
 							],
@@ -1071,10 +1062,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level5",
-									"sid": 238685475812511,
+									"sid": 421758263653702,
 									"parameters": {
-										"x": "637",
-										"y": "-119"
+										"x": "1310",
+										"y": " 715"
 									}
 								},
 								{
@@ -1088,10 +1079,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level6",
-									"sid": 891677336371839,
+									"sid": 722435368188382,
 									"parameters": {
-										"x": "637",
-										"y": "309"
+										"x": "1104",
+										"y": "826"
 									}
 								}
 							],
@@ -1123,10 +1114,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level6",
-									"sid": 602692728898863,
+									"sid": 707929282699942,
 									"parameters": {
-										"x": "637",
-										"y": "-119"
+										"x": "1104",
+										"y": "826"
 									}
 								},
 								{
@@ -1140,10 +1131,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level7",
-									"sid": 348486764656984,
+									"sid": 841883796824275,
 									"parameters": {
-										"x": "637",
-										"y": "309"
+										"x": "974",
+										"y": "673"
 									}
 								}
 							],
@@ -1175,10 +1166,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level7",
-									"sid": 574631611201057,
+									"sid": 663531076107108,
 									"parameters": {
-										"x": "637",
-										"y": "-119"
+										"x": "974",
+										"y": "673"
 									}
 								},
 								{
@@ -1192,10 +1183,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level8",
-									"sid": 365161007725453,
+									"sid": 282707499231582,
 									"parameters": {
-										"x": "637",
-										"y": "309"
+										"x": "906",
+										"y": " 480"
 									}
 								}
 							],
@@ -1227,10 +1218,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level8",
-									"sid": 400020167189290,
+									"sid": 864076298935621,
 									"parameters": {
-										"x": "637",
-										"y": "-119"
+										"x": "906",
+										"y": " 480"
 									}
 								},
 								{
@@ -1244,10 +1235,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level9",
-									"sid": 900428862264607,
+									"sid": 544804993776543,
 									"parameters": {
-										"x": "637",
-										"y": "309"
+										"x": "629",
+										"y": " 447"
 									}
 								}
 							],
@@ -1279,10 +1270,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level9",
-									"sid": 486036992657683,
+									"sid": 822445734893180,
 									"parameters": {
-										"x": "637",
-										"y": "-119"
+										"x": "629",
+										"y": " 447"
 									}
 								},
 								{
@@ -1296,10 +1287,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level10",
-									"sid": 555598012781467,
+									"sid": 421784998868078,
 									"parameters": {
-										"x": "637",
-										"y": "309"
+										"x": "686",
+										"y": "218"
 									}
 								}
 							],
@@ -1331,10 +1322,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level10",
-									"sid": 980386576341006,
+									"sid": 727422518486470,
 									"parameters": {
-										"x": "637",
-										"y": "-119"
+										"x": "686",
+										"y": "218"
 									}
 								},
 								{
@@ -1348,10 +1339,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level11",
-									"sid": 277923918254123,
+									"sid": 639449413854236,
 									"parameters": {
-										"x": "637",
-										"y": "309"
+										"x": "899",
+										"y": " 79"
 									}
 								}
 							],
@@ -1383,10 +1374,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level11",
-									"sid": 103088104826327,
+									"sid": 800659172374846,
 									"parameters": {
-										"x": "637",
-										"y": "-119"
+										"x": "899",
+										"y": " 79"
 									}
 								},
 								{
@@ -1400,10 +1391,10 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level12",
-									"sid": 583104659566624,
+									"sid": 533215868534826,
 									"parameters": {
-										"x": "637",
-										"y": "309"
+										"x": "1097",
+										"y": " 76"
 									}
 								}
 							],
@@ -1435,14 +1426,49 @@
 								{
 									"id": "set-position",
 									"objectClass": "Level12",
-									"sid": 249671285436704,
+									"sid": 351974715993208,
 									"parameters": {
-										"x": "637",
-										"y": "-119"
+										"x": "1097",
+										"y": " 76"
 									}
 								}
 							],
 							"sid": 544205347530709
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 895465601354060,
+									"parameters": {
+										"variable": "LevelCount",
+										"comparison": 0,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "Level1",
+									"sid": 578855970776196,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-position",
+									"objectClass": "Level1",
+									"sid": 840272718441053,
+									"parameters": {
+										"x": "1680",
+										"y": " 225"
+									}
+								}
+							],
+							"sid": 497296686671254
 						}
 					],
 					"sid": 856271323862529,
