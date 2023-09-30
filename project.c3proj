@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 35000,
+	"savedWithRelease": 35800,
 	"name": "New project",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -149,7 +149,8 @@
 		"items": [
 			"Zone1",
 			"Fight",
-			"RandomEvent"
+			"RandomEvent",
+			"api"
 		],
 		"subfolders": []
 	},
@@ -157,7 +158,8 @@
 		"items": [
 			"Zone1 code",
 			"fight code",
-			"RandomEvent code"
+			"RandomEvent code",
+			"api"
 		],
 		"subfolders": []
 	},
